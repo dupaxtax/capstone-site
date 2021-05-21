@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+input[type=submit]  {
+    margin-top: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input {
+    text-align: center;
+}
