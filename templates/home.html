@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="{{ url_for('static',    filename='css/main-style.css') }}">
-
 </head>
 <body>
+    <ul>
+        <li><a href="home.html">Home</a> </li>
+        <li><a href="/statistics">Statistics</a> </li>
+    </ul>
     <h1>Congenital Heart Disease Risk Checker</h1>
     <p>Please enter the following data points based on recent test results.</p>
     <p>This will be used to evaluate the patients risk of congenital heart disease</p>
 
-    <form action="/check_risk" method="post">
+    <form action="check_risk" method="post">
         <p>Age</p>
         <input type="text" id="age" name="age"><br>
-        <p>Glucose</p>
-        <input type="text" id="glucose" name="glucose"><br>
+        <p>Number of Smoked Cigarettes per day</p>
+        <input type="text" id="cigarettes" name="cigarettes"><br>
+        <p>Total Cholesterol</p>
+        <input type="text" id="cholesterol" name="cholesterol"><br>
         <p>Systolic Blood Pressure</p>
         <input type="text" id="sbp" name="sbp"><br>
         <p>Diastolic Blood Pressure</p>
         <input type="text" id="dbp" name="dbp"><br>
-        <p>Total Cholesterol</p>
-        <input type="text" id="cholesterol" name="cholesterol"><br>
-        <p>Number of Smoked Cigarettes per day</p>
-        <input type="text" id="cigarettes" name="cigarettes"><br>
         <p>BMI</p>
         <input type="text" id="bmi" name="bmi"><br>
         <p>Heart Rate</p>
         <input type="text" id="heart-rate" name="heart-rate"><br>
-        <input type="submit" id="check-risk" name="check-risk">
+        <p>Glucose</p>
+        <input type="text" id="glucose" name="glucose"><br>
+        <input type="submit">
     </form>
 </body>
 </html>
