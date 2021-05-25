@@ -25,7 +25,7 @@ def check_risk():
     data = pd.DataFrame(columns=['age', 'cigarettes', 'cholesterol', 'sbp', 'dbp', 'bmi','heart_rate', 'glucose'], index=[1])
     data.loc[1] = [age, cigarettes, cholesterol, sbp, dbp, bmi, heart_rate, glucose]
 
-    file = 'chd_model'
+    file = 'static/misc/chd_model'
     loaded_model = pickle.load(open(file, 'rb'))
     data_predictions = loaded_model.predict(data)
     print(data_predictions)
