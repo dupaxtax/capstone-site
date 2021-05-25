@@ -57,5 +57,20 @@ def statistics():
     return render_template('statistics.html')
 
 
+@app.route('/risk-factors', methods=['GET'])
+def risk_factors():
+    return render_template('risk-factors.html')
+
+
+@app.route('/trends', methods=['GET'])
+def trends():
+    return render_template('trends.html')
+
+
+@app.route('/accuracy', methods=['GET'])
+def accuracy():
+    return render_template('accuracy.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
