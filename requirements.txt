@@ -24,7 +24,6 @@ dbus-python==1.2.16
 decorator==4.4.2
 defusedxml==0.6.0
 distro==1.5.0
-distro-info===0.23ubuntu1
 entrypoints==0.3
 Flask==2.0.1
 Flask-Compress==1.9.0
