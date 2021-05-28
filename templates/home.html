@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+
     <link rel="stylesheet" href="{{ url_for('static',    filename='css/main-style.css') }}">
 </head>
 <body>
@@ -13,7 +14,14 @@
     <h1>Congenital Heart Disease Risk Checker</h1>
     <p>Please enter the following data points based on recent test results.</p>
     <p>This will be used to evaluate the patients risk of congenital heart disease</p>
-
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
     <form action="check_risk" method="post">
         <p>Age</p>
         <input type="text" id="age" name="age"><br>

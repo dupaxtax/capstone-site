@@ -1,8 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 import pandas as pd
 import pickle
 
 app = Flask(__name__)
+app.secret_key = 'secret_key'
 
 
 @app.route('/')
@@ -13,6 +14,11 @@ def home():
 @app.route('/check_risk', methods=['POST'])
 def check_risk():
     # Get the input data
+    if not request.form['age'] or request.form['glucose'] or request.form['sbp'] or request.form['dbp'] or request.form['cholesterol'] or request.form['cigarettes'] or request.form['bmi'] or request.form['heart-rate']:
+        flash("Please enter data in all fields")
+        return render_template('home.html')
+    else:
+        flash("else")
     age = request.form['age']
     glucose = request.form['glucose']
     sbp = request.form['sbp']
